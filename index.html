@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="script/gsap.min.js"></script>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+    gsap.to("#box", {repeat:-1,yoyo:true, duration: 1, x: 100});
+</script>
+</html>
