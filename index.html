@@ -4,23 +4,55 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
         }
-        #box{
+
+        #box {
             width: 200px;
             height: 200px;
             background: red;
-            border-radius: 20px;
         }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin-bottom: 10px;
+        }
+
     </style>
     <script src="script/gsap.min.js"></script>
 </head>
 <body>
-<div id="box"></div>
+<div id="box">
+
+
+</div>
 </body>
 <script>
-    gsap.to("#box", {repeat:-1,yoyo:true, duration: 1, x: 100});
+    // gsap.ticker.fps(30)
+    // function ticker(){
+    //     console.log('xxxx')
+    //     console.log(gsap.ticker.deltaRatio(60))
+    // }
+    // const obj = {
+    //     value: 1
+    // }
+
+    // const box = document.getElementById('box')
+    // gsap.to(obj, {
+    //     value: 100,
+    //     duration: 10,
+    //     data:'123',
+    //     immediateRender:false,
+    //     onUpdate: function () {
+    //         // console.log(this.targets()[0].value)
+    //         // box.textContent = parseInt(obj.value)
+    //         console.log(gsap.isTweening(obj))
+    //     }
+    // })
+
 </script>
 </html>
