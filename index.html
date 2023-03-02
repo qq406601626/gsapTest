@@ -36,6 +36,7 @@
     <div class="box green"></div>
 </div>
 
+
 </body>
 <script>
     const btn = document.getElementById('btn')
@@ -43,9 +44,11 @@
     const boxBlue = document.querySelectorAll('.box.blue')
     const tween = new TweenMax(boxGreen,4,{
         x:400,
+        paused:true
     })
     btn.addEventListener('click', () => {
-        tween.reverse(-2)
+        tween.time(2)
+        tween.play()
     })
 </script>
 </html>
