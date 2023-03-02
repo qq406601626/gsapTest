@@ -9,50 +9,43 @@
             padding: 0;
         }
 
-        #box {
+        .container {
+            display: inline-block;
+        }
+
+        .box {
             width: 200px;
             height: 200px;
-            background: red;
         }
 
-        .item {
-            width: 100px;
-            height: 100px;
+        .green {
             background: green;
-            margin-bottom: 10px;
         }
+
+        .blue {
+            background: blue;
+        }
+
 
     </style>
-    <script src="script/gsap.min.js"></script>
+    <script src="script/TweenMax.min.js"></script>
 </head>
 <body>
-<div id="box">
-
-
+<button id="btn">click</button>
+<div class="container">
+    <div class="box green"></div>
 </div>
+
 </body>
 <script>
-    // gsap.ticker.fps(30)
-    // function ticker(){
-    //     console.log('xxxx')
-    //     console.log(gsap.ticker.deltaRatio(60))
-    // }
-    // const obj = {
-    //     value: 1
-    // }
-
-    // const box = document.getElementById('box')
-    // gsap.to(obj, {
-    //     value: 100,
-    //     duration: 10,
-    //     data:'123',
-    //     immediateRender:false,
-    //     onUpdate: function () {
-    //         // console.log(this.targets()[0].value)
-    //         // box.textContent = parseInt(obj.value)
-    //         console.log(gsap.isTweening(obj))
-    //     }
-    // })
-
+    const btn = document.getElementById('btn')
+    const boxGreen = document.querySelectorAll('.box.green')
+    const boxBlue = document.querySelectorAll('.box.blue')
+    const tween = new TweenMax(boxGreen,4,{
+        x:400,
+    })
+    btn.addEventListener('click', () => {
+        tween.reverse(-2)
+    })
 </script>
 </html>
