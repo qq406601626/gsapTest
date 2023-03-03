@@ -24,7 +24,6 @@
         }
 
     </style>
-    <script src="script/TweenMax.min.js"></script>
 </head>
 <body>
 <button id="btn">click</button>
@@ -35,12 +34,12 @@
 
 
 </body>
-<script>
+<script type="module">
+    import {gsap} from './script/gsap-public/src/index.js'
     const btn = document.getElementById('btn')
     const boxGreen = document.querySelector('.box')
     btn.addEventListener('click', () => {
-     // TweenMax.to(window,2,{scrollTo:300})
-        TweenMax.to(window, 2, {scrollTo:200});
+
     })
 
 
