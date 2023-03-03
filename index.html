@@ -14,18 +14,14 @@
         }
 
         .box {
-            width: 200px;
-            height: 200px;
+            width: 20px;
+            height: 20px;
         }
 
         .green {
             background: green;
+            border-radius: 50%;
         }
-
-        .blue {
-            background: blue;
-        }
-
 
     </style>
     <script src="script/TweenMax.min.js"></script>
@@ -35,20 +31,18 @@
 <div class="container">
     <div class="box green"></div>
 </div>
+<div class="placement" style="height: 3000px"></div>
 
 
 </body>
 <script>
     const btn = document.getElementById('btn')
-    const boxGreen = document.querySelectorAll('.box.green')
-    const boxBlue = document.querySelectorAll('.box.blue')
-    const tween = new TweenMax(boxGreen,4,{
-        x:400,
-        paused:true
-    })
+    const boxGreen = document.querySelector('.box')
     btn.addEventListener('click', () => {
-        tween.time(2)
-        tween.play()
+     // TweenMax.to(window,2,{scrollTo:300})
+        TweenMax.to(window, 2, {scrollTo:200});
     })
+
+
 </script>
 </html>
